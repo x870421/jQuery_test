@@ -1,0 +1,506 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//以下內容
+
+:host,
+:root {
+  --swiper-theme-color: #fff;
+}
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+  font-family: Microsoft JhengHei;
+  //NAV
+  .nav {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    height: 30px;
+    li {
+      margin: 5px;
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        padding-right: 8px;
+        font-weight: bolder;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+    .fb {
+      a {
+        border-right: 2px solid #cccccc;
+        span {
+          color: #4460a0;
+          &:hover {
+            color: #517bdc;
+          }
+        }
+      }
+    }
+    .twi {
+      a {
+        span {
+          color: #00aaec;
+          &:hover {
+            color: #77cff2;
+          }
+        }
+      }
+    }
+  }
+  //選單
+  header {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h1 {
+      a {
+        width: 184px;
+        height: 40px;
+        background-image: url("./images/logo.png");
+        background-size: cover;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      li {
+        width: fit-content;
+        list-style-type: none;
+        width: 100px;
+
+        a {
+          color: #42d3a9;
+          display: block;
+          font-weight: bold;
+          text-decoration: none;
+          text-align: center;
+          padding: 14px;
+          font-size: 16px;
+
+          &:hover,
+          &.active {
+            background-color: #42d3a9;
+            color: #fff;
+          }
+        }
+        ul {
+          display: none;
+          background-color: white;
+          position: absolute;
+          z-index: 999;
+
+          li {
+            a {
+              border: 1px solid #42d3a9;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 輪播
+  .swiper {
+    width: 1024px;
+    height: 346px;
+    z-index: 99;
+    .swiper-wrapper {
+      .swiper-slide {
+        .banner {
+          background-image: url("./images/banner.png");
+          background-size: cover;
+          width: 100%;
+          height: 346px;
+          position: relative;
+          h2 {
+            position: absolute;
+            color: white;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            width: 100%;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 35px 45px;
+            top: calc(50% - 70px);
+          }
+        }
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+    }
+  }
+  // 中間圖片
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4rem 0;
+
+    .card {
+      padding: 20px 10px;
+      width: 300px;
+      border: 1px solid #eee;
+      margin: 10px 20px;
+      line-height: 1.5rem;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 5px 0px;
+      transform: scale(1);
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 5px 0px;
+      }
+
+      div {
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 1rem 0;
+        font-weight: bold;
+      }
+      ul {
+        padding: 0 1.25rem;
+        li {
+          list-style: disc;
+        }
+      }
+    }
+  }
+  // 表格
+  .table {
+    padding: 3rem;
+
+    h2 {
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .course {
+      margin: auto;
+      width: 100%;
+      tr {
+        font-weight: 500;
+
+        th,
+        td {
+          padding: 10px;
+          text-align: left;
+          border-top: 1px solid #dddddd;
+          border-bottom: 1px solid #dddddd;
+          span {
+            color: #33b897;
+          }
+        }
+        th {
+          background-color: #f7f7f7;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // 留言
+  .form {
+    padding: 1rem 0;
+    margin: auto;
+    width: 95%;
+    background: linear-gradient(180deg, #00644b 2.13%, #009872 96.66%);
+    font-weight: bolder;
+    color: #fff;
+
+    h2 {
+      font-size: 25px;
+      text-align: center;
+      padding: 2rem;
+      line-height: 2rem;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      textarea,
+      .right {
+        width: 45%;
+        margin: 1rem;
+      }
+      textarea {
+        padding: 1rem;
+        border: none;
+        border-radius: 3px;
+      }
+
+      .right {
+        position: relative;
+
+        label {
+          cursor: pointer;
+        }
+
+        input {
+          width: 100%;
+          padding: 5px;
+          margin: 5px 0 10px 0;
+          position: relative;
+          border: none;
+          border-radius: 3px;
+          &:last-of-type {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            background-color: #00cc99;
+            border: none;
+            color: #fff;
+            width: 70px;
+          }
+        }
+      }
+    }
+  }
+  // 表尾
+
+  footer {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h1 {
+      margin: 1rem;
+
+      a {
+        display: block;
+        background-image: url("./images/footerLogo.png");
+        background-size: contain;
+        width: 181px;
+        height: 38px;
+        background-repeat: no-repeat;
+        white-space: nowrap;
+        overflow: hidden;
+        text-indent: 101%;
+      }
+    }
+
+    ul {
+      margin: 1rem;
+      li {
+        line-height: 1.25rem;
+        font-weight: bold;
+        a {
+          color: #e12d80;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .gotop {
+    background-color: rgba(0, 100, 75, 0.8);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    &:hover {
+      background-color: rgba(0, 100, 75, 0.6);
+      cursor: pointer;
+    }
+    i {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 969px) {
+  .wrap {
+    width: 100%;
+    .swiper {
+      width: 100%;
+      background-position: center;
+    }
+
+    .form {
+      form {
+        textarea,
+        .right {
+          width: 85%;
+        }
+        .right {
+          input {
+            &:last-of-type {
+              position: static;
+            }
+          }
+        }
+      }
+    }
+
+    .gotop {
+      width: 30px;
+      height: 30px;
+      i {
+        font-size: 26px;
+      }
+    }
+  }
+}
