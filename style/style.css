@@ -146,7 +146,7 @@ table {
 }
 
 .wrap {
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font-family: Microsoft JhengHei;
 }
@@ -276,7 +276,7 @@ table {
 }
 
 .wrap .swiper {
-  width: 1024px;
+  max-width: 1024px;
   height: 346px;
   z-index: 99;
 }
@@ -319,7 +319,7 @@ table {
 
 .wrap .content .card {
   padding: 20px 10px;
-  width: 300px;
+  width: calc(100% / 3 - 40px);
   border: 1px solid #eee;
   margin: 10px 20px;
   line-height: 1.5rem;
@@ -544,13 +544,12 @@ table {
   color: #fff;
 }
 
-@media (max-width: 969px) {
-  .wrap {
-    width: 100%;
-  }
+@media (max-width: 960px) {
   .wrap .swiper {
-    width: 100%;
     background-position: center;
+  }
+  .wrap .content .card {
+    min-width: 425px;
   }
   .wrap .form form textarea,
   .wrap .form form .right {
@@ -565,6 +564,12 @@ table {
   }
   .wrap .gotop i {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrap .content .card {
+    min-width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

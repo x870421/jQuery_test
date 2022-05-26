@@ -140,7 +140,7 @@ table {
   --swiper-theme-color: #fff;
 }
 .wrap {
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   font-family: Microsoft JhengHei;
   //NAV
@@ -249,7 +249,7 @@ table {
 
   // 輪播
   .swiper {
-    width: 1024px;
+    max-width: 1024px;
     height: 346px;
     z-index: 99;
     .swiper-wrapper {
@@ -287,7 +287,7 @@ table {
 
     .card {
       padding: 20px 10px;
-      width: 300px;
+      width: calc(100% / 3 - 40px);
       border: 1px solid #eee;
       margin: 10px 20px;
       line-height: 1.5rem;
@@ -471,12 +471,15 @@ table {
   }
 }
 
-@media (max-width: 969px) {
+@media (max-width: 960px) {
   .wrap {
-    width: 100%;
     .swiper {
-      width: 100%;
       background-position: center;
+    }
+    .content {
+      .card {
+        min-width: 425px;
+      }
     }
 
     .form {
@@ -500,6 +503,16 @@ table {
       height: 30px;
       i {
         font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .wrap {
+    .content {
+      .card {
+        min-width: 300px;
       }
     }
   }
