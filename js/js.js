@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(this).parent().siblings().find("ul").slideUp();
     $(this).parent().find("ul").slideToggle();
     $(this).parent().siblings().find(".active").removeClass("active");
-    $(this).addClass("active");
+    $(this).toggleClass("active");
   });
 
   $(".gotop").click(() => {
