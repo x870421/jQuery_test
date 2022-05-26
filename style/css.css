@@ -223,7 +223,7 @@ table {
 .wrap header h1 a {
   width: 184px;
   height: 40px;
-  background-image: url("./images/logo.png");
+  background-image: url("../images/logo.png");
   background-size: cover;
   display: block;
   text-indent: 101%;
@@ -282,7 +282,7 @@ table {
 }
 
 .wrap .swiper .swiper-wrapper .swiper-slide .banner {
-  background-image: url("./images/banner.png");
+  background-image: url("../images/banner.png");
   background-size: cover;
   width: 100%;
   height: 346px;
@@ -492,7 +492,7 @@ table {
 
 .wrap footer h1 a {
   display: block;
-  background-image: url("./images/footerLogo.png");
+  background-image: url("../images/footerLogo.png");
   background-size: contain;
   width: 181px;
   height: 38px;
